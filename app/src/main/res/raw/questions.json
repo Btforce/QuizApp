@@ -1,16 +1,20 @@
 [
   {
-    "question": "Is this a question?",
+    "question": "Is this a question?"
+  },
+  {
     "answer": true
   },
-
   {
-    "question": "Is this not a question",
+    "question": "Is this not a question"
+  },
+  {
     "answer": false
   },
-
   {
-    "question": "SKT will win worlds.",
+    "question": "SKT will win worlds."
+  },
+  {
     "answer": false
   }
 ]
