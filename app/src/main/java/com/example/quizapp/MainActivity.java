@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Quiz quiz;
 
 
+
     public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -37,16 +38,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         InputStream jsonFileInputStream = getResources().openRawResource(R.raw.questions);
         String jsonString = readTextFile(jsonFileInputStream);
 
-        Log.d(TAG, "onCreate: " + jsonString);
-
 
         questions = gson.fromJson(jsonString, Question[].class);
 
         questionList = Arrays.asList(questions);
 
+        quiz = new Quiz(questionList);
+
+        Log.d(TAG, "onCreate: " + jsonString);
 
         wireWidgets();
         setListeners();
+        textViewQuestion.setText(quiz.getQuestionText());
 
     }
 
@@ -93,7 +96,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(quiz.hasMoreQuestions() == true){
                     quiz.nextQuestion();
 
-                    quiz.getQuestionList().get(quiz.getCurrentQuestion());
+                    textViewQuestion.setText(quiz.getQuestionText());
+                }
+                else{
+
                 }
 
                 break;
@@ -108,7 +114,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(quiz.hasMoreQuestions() == true){
                     quiz.nextQuestion();
 
-                    Object question = quiz.getQuestionList().get(quiz.getCurrentQuestion());
+                    textViewQuestion.setText(quiz.getQuestionText());
+                }
+                else{
 
                 }
 

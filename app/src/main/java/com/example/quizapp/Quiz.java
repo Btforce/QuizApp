@@ -4,9 +4,15 @@ import java.util.List;
 
 public class Quiz {
     private int score;
-    private List questionList;
+    private List<Question> questionList;
     private Question question;
-    private int currentQuestion = 0;
+    private int currentQuestion;
+    private boolean answer;
+
+    public Quiz(List questions){
+        questionList = questions;
+        currentQuestion = 0;
+    }
 
     public int getScore() {
         return score;
@@ -40,13 +46,15 @@ public class Quiz {
         this.currentQuestion = currentQuestion;
     }
 
+    public boolean getAnswer(){return answer;}
+
     public void score(){
         score++;
     }
 
 
     public boolean checkAnswer(boolean answer){
-        if(getQuestion().getAnswer() == answer){
+        if(questionList.get(currentQuestion).getAnswer()== answer){
             return true;
         }
         else{return false;}
@@ -62,5 +70,10 @@ public class Quiz {
     public void nextQuestion(){
         currentQuestion++;
     }
+
+    public String getQuestionText(){
+        return questionList.get(currentQuestion).getQuestion();
+    }
+
 
 }

@@ -4,6 +4,15 @@ public class Question {
 
     private String question;
     private Boolean answer;
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "question='" + question + '\'' +
+                ", answer=" + answer +
+                '}';
+    }
+
     public Question(){
 
     }

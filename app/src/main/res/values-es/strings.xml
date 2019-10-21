@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Prueba Applicación</string>
+    <string name="False">Falso</string>
+    <string name="True">Cierto</string>
+</resources>

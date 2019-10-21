@@ -1,21 +1,43 @@
 [
   {
-    "question": "Is this a question?"
-  },
-  {
+    "question": "Is this a question?",
+
     "answer": true
   },
   {
-    "question": "Is this not a question"
-  },
-  {
+    "question": "Is this not a question?",
+
     "answer": false
   },
   {
-    "question": "SKT will win worlds."
+    "question": "SKT will win worlds.",
+
+    "answer": false
   },
   {
+    "question": "Jackson thinks the opposite of true is true.",
+
+    "answer": true
+  },
+  {
+    "question": "TL will win worlds",
+
     "answer": false
+  },
+  {
+    "question": "Sigmund has his airdrop on.",
+
+    "answer": true
+  },
+  {
+    "question": "Matthew is addicted to Summoners War.",
+
+    "answer": true
+  },
+  {
+    "question": "Andrew plays too much Mario Kart Tour.",
+
+    "answer": true
   }
 ]
 
