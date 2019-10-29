@@ -39,7 +39,7 @@ public class Quiz {
     }
 
     public int getCurrentQuestion() {
-        return currentQuestion;
+        return currentQuestion + 1;
     }
 
     public void setCurrentQuestion(int currentQuestion) {
@@ -53,12 +53,13 @@ public class Quiz {
     }
 
 
-    public void checkAnswer(boolean answer){
+    public boolean checkAnswer(boolean answer){
         if(questionList.get(currentQuestion).getAnswer()== answer){
             score();
+            return true;
 
         }
-
+        return false;
     }
 
     public boolean hasMoreQuestions(){
