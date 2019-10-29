@@ -5,5 +5,7 @@
     <string name="False">False</string>
     <string name="Reset">Reset</string>
     <string name="Score">Score</string>
+    <string name="Correct">Correct</string>
+    <string name="Incorrect">Incorrect</string>
 
 </resources>

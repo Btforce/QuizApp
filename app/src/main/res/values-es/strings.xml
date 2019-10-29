@@ -5,5 +5,7 @@
     <string name="True">Cierto</string>
     <string name="Reset">Reiniciar</string>
     <string name="Score">Puntaje</string>
+    <string name="Correct">Correcto</string>
+    <string name="Incorrect">Incorrecto</string>
 
 </resources>

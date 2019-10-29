@@ -100,12 +100,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_main_true: {
 
                 if(quiz.checkAnswer(true)){
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,getString(R.string.Correct), Toast.LENGTH_SHORT).show();
 
                     flashColor(true);
                 }
                 else{
-                    Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.Incorrect), Toast.LENGTH_SHORT).show();
 
                     flashColor(false);
                 }
@@ -140,12 +140,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_main_false: {
 
                 if(quiz.checkAnswer(false)){
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.Correct), Toast.LENGTH_SHORT).show();
 
                     flashColor(true);
                 }
                 else{
-                    Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.Incorrect), Toast.LENGTH_SHORT).show();
 
                     flashColor(false);
                 }
