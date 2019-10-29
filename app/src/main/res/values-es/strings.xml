@@ -3,4 +3,7 @@
     <string name="app_name">Prueba Applicación</string>
     <string name="False">Falso</string>
     <string name="True">Cierto</string>
+    <string name="Reset">Reiniciar</string>
+    <string name="Score">Puntaje</string>
+
 </resources>

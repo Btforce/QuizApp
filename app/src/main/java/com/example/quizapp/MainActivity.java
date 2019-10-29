@@ -2,6 +2,7 @@ package com.example.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    public static final String EXTRA_SCORE = "score";
     private Button buttonTrue;
     private Button buttonFalse;
     private TextView textViewQuestion;
@@ -89,16 +90,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId()){
             case R.id.button_main_true: {
 
-                if(quiz.checkAnswer(true) == true){
-                    quiz.score();
-                }
+                quiz.checkAnswer(true);
+
 
                 if(quiz.hasMoreQuestions() == true){
                     quiz.nextQuestion();
 
                     textViewQuestion.setText(quiz.getQuestionText());
+
+
                 }
                 else{
+
+                    int score = quiz.getScore();
+
+                    Intent scoreIntent =
+                            new Intent(MainActivity.this, ScoreActivity.class);
+                    scoreIntent.putExtra(EXTRA_SCORE, score);
+
+                    startActivity(scoreIntent);
+                    quiz.setCurrentQuestion(0);
+                    quiz.setScore(0);
+                    textViewQuestion.setText(quiz.getQuestionText());
 
                 }
 
@@ -107,9 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button_main_false: {
 
-                if(quiz.checkAnswer(false) == true){
-                    quiz.score();
-                }
+                quiz.checkAnswer(false);
 
                 if(quiz.hasMoreQuestions() == true){
                     quiz.nextQuestion();
@@ -117,6 +128,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     textViewQuestion.setText(quiz.getQuestionText());
                 }
                 else{
+
+                    int score = quiz.getScore();
+
+                    Intent scoreIntent =
+                            new Intent(MainActivity.this, ScoreActivity.class);
+                    scoreIntent.putExtra(EXTRA_SCORE, score);
+
+                    startActivity(scoreIntent);
+                    quiz.setCurrentQuestion(0);
+                    quiz.setScore(0);
+                    textViewQuestion.setText(quiz.getQuestionText());
+
 
                 }
 

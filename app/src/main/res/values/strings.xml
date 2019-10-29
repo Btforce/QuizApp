@@ -3,5 +3,7 @@
     <string name="app_name">Quiz App</string>
     <string name="True">True</string>
     <string name="False">False</string>
+    <string name="Reset">Reset</string>
+    <string name="Score">Score</string>
 
 </resources>

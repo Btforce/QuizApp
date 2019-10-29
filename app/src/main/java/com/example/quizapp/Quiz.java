@@ -53,17 +53,19 @@ public class Quiz {
     }
 
 
-    public boolean checkAnswer(boolean answer){
+    public void checkAnswer(boolean answer){
         if(questionList.get(currentQuestion).getAnswer()== answer){
-            return true;
+            score();
+
         }
-        else{return false;}
+
     }
 
     public boolean hasMoreQuestions(){
         if(currentQuestion + 1 <= questionList.size() - 1){
             return true;
         }
+
         return false;
     }
 

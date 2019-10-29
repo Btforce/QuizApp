@@ -1,11 +1,11 @@
 [
   {
-    "question": "Is this a question?",
+    "question": "This is a statement.",
 
     "answer": true
   },
   {
-    "question": "Is this not a question?",
+    "question": "This is not a statement.",
 
     "answer": false
   },
@@ -36,6 +36,16 @@
   },
   {
     "question": "Andrew plays too much Mario Kart Tour.",
+
+    "answer": true
+  },
+  {
+    "question": "Andrew plays Mario Kart during class.",
+
+    "answer": true
+  },
+  {
+    "question": "Matthew is platinum 3.",
 
     "answer": true
   }
